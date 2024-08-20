@@ -32,4 +32,5 @@ public class KaggleData {
 	private String reportDistrictNo;
 	
 	
+	
 }

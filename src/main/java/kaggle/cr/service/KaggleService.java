@@ -1,6 +1,7 @@
 package kaggle.cr.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -17,5 +18,11 @@ public class KaggleService {
 	
 	public List<KaggleData> getAllRecords() {
 		return kRepo.findAll();
+	}
+	
+	public KaggleData getById(Long id) {
+		Optional<KaggleData> kd =  kRepo.findById(id);
+		
+		return kd.get();
 	}
 }
